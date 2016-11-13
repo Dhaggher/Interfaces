@@ -1,6 +1,8 @@
 package com.dager.ropa;
 
-public class Playera extends Ropa{
+import com.dager.interfaces.IDevolucion;
+
+public class Playera extends Ropa implements IDevolucion{
 	
 	private String corte;
 	
@@ -23,5 +25,8 @@ public class Playera extends Ropa{
 		System.out.println("Corte: " + getCorte());
 	}
 
-	
+	@Override
+	public void devolucion() {
+		System.out.println("Playera devuelta");
+	}
 }

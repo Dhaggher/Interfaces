@@ -1,6 +1,8 @@
 package com.dager.ropa;
 
-public class Jeans extends Ropa {
+import com.dager.interfaces.IDevolucion;
+
+public class Jeans extends Ropa implements IDevolucion {
 
 	private String corte;
 	private char genero;
@@ -29,6 +31,11 @@ public class Jeans extends Ropa {
 		super.mostrarDatos(nombreClase);
 		System.out.println("Corte: " + getCorte());
 		System.out.println("Genero: " + getGenero());
+	}
+
+	@Override
+	public void devolucion() {
+		System.out.println("Jeans devueltos");
 	}
 	
 }
